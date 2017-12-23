@@ -1,0 +1,11 @@
+{
+  "name": "homepage",
+  "version": "1.0.0",
+  "description": "Chilom homepage",
+  "main": "server.js",
+  "author": "Vlad Chilom",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
