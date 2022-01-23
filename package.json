@@ -1,11 +1,14 @@
 {
-  "name": "homepage",
+  "name": "vladchilom.com",
   "version": "1.0.0",
-  "description": "Chilom homepage",
-  "main": "server.js",
-  "author": "Vlad Chilom",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.13.3"
+    "express": "^4.17.1"
   }
 }

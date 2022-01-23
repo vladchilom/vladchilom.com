@@ -5,132 +5,279 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  text-align: center;
   font-family: 'Roboto', sans-serif;
-}
-
-#page {
-  width: 550px;
-  height: 550px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -275px 0 0 -275px;
-}
-
-#title {
-  font-size: 2em;
   font-weight: bold;
   text-align: center;
-  width: 100%;
-  margin: auto;
-  margin-bottom: 70px;
-  margin-top: 51px;
-}
-
-.position {
-  font-size: 0.6em;
-}
-
-#content {
-  width: 100%;
-  margin: auto;
-  position: relative;
-}
-
-#photo {
-  width: 56%;
-  height: 100%;
-  position: relative;
-}
-
-#links {
-  width: 23%;
-}
-
-#links, #photo {
-  height: 250px;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-#headshot {
-  height: 100%;
-  border-radius: 50%;
-  display: block;
-  margin: auto;
-  position: absolute; 
-  top: 0; 
-  bottom: 0; 
-  left: 0; 
-  right: 0; 
 }
 
 a {
-  width: 66px;
-  text-align: left;
-  color: black;
   text-decoration: none;
-  font-size: 1em;
-  padding: 1.3em;
-  float: left;
-  vertical-align: middle;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
-.animation, .animation::before, .animation::after {
+#body-container {
+  min-width: 200px;
+  min-height: 200px;
+  max-width: 600px;
+  height: 90%;
+  width: 80%;
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
-  right: 0;
-}
-
-.animation {
+  right: 0;  
   margin: auto;
-  box-shadow: inset 0 0 0 0px rgba(0, 0, 0, 0);
-}
-.animation::before, .animation::after {
-  content: '';
-  z-index: -1;
-  margin: -5%;
-  box-shadow: inset 0 0 0 1px;
-  animation: lines 42s linear infinite;
-}
-.animation::before {
-  animation-delay: -21s;
 }
 
-@keyframes lines {
-  0%, 100% {
-    clip: rect(0px, 606px, 2px, 0px);
-  }
-  25% {
-    clip: rect(0px, 2px, 606px, 0px);
-  }
-  50% {
-    clip: rect(604px, 606px, 606px, 0px);
-  }
-  75% {
-    clip: rect(0px, 606px, 606px, 604px);
+@media only screen and (min-height: 500px) and (min-width: 500px) {
+  #body-container {
+    height: 70%;
   }
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
+#page-container {
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-top: 5%;
+  padding-bottom: 10%;
 }
 
-#myProgress {
+#heading-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+#name {
+  font-size: 2rem;
+  width: 100%;
+}
+
+#title {
+  font-size: 1.2rem;
+  width: 100%;
+}
+
+#content-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10%;
+  gap: 2rem;
+}
+
+#photo-container {
+  width: 30%;
+  min-width: 200px;
+  min-height: 200px;
+  max-width: 300px;
+  max-height: 300px;
+  display: flex;
+}
+
+#photo {
+  width: 100%;
+  border-radius: 50%;
+  align-self: center;
+}
+
+#links-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  gap: 2rem;
+  width: 125px;
+}
+
+.link-container {
+  width: 100%;
+}
+
+.link {
+  font-size: 1.2rem;
+  color: black;
+}
+
+#links-container a {
+  width: 100%;
+}
+
+#links-container .link-container {
+  position: relative;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  overflow: hidden;
+}
+
+@media (hover: hover) {
+  #links-container .link-container:before {
+    box-sizing: border-box;
+    transform: translateX(100%);
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
     width: 100%;
-    background-color: grey;
+    height: 0px;
+    border-bottom: 2px solid transparent;
+    border-left: 2px solid transparent;
+  }
+
+  #links-container .link-container:after {
+    box-sizing: border-box;
+    transform: translateX(-100%);
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0px;
+    border-top: 2px solid transparent;
+    border-right: 2px solid transparent;
+  }
+
+  #links-container .link-container:hover:before {
+    transition: .1s transform linear, .1s height linear .1s;
+    transform: translateX(0);
+    height: 100%;
+    border-color: black;
+  }
+
+  #links-container .link-container:hover:after {
+    transition: .1s transform linear .2s, .1s height linear .3s;
+    transform: translateX(0);
+    height: 100%;
+    border-color: black;
+  }
 }
-#myBar {
-    width: 1%;
-    height: 30px;
-    background-color: green;
+
+#animation-container {
+  position: relative;
+}
+
+#animation-top {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 2px;
+  content: '';
+  background: black;
+  animation: border-top 20s linear 0s infinite;
+}
+
+#animation-right {
+  position: absolute;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  content: '';
+  background: black;
+  animation: border-right 20s linear 0s infinite;
+}
+
+#animation-bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  content: '';
+  background: black;
+  animation: border-bottom 20s linear 0s infinite;
+}
+
+#animation-left {
+  position: absolute;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  content: '';
+  background: black;
+  animation: border-left 20s linear 0s infinite;
+}
+
+@keyframes border-top {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+
+  50% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  
+  50.1% {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+  
+  100% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+}
+
+@keyframes border-right {
+  0% {
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
+
+  50% {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+  
+  50.1% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  
+  100% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+}
+
+@keyframes border-bottom {
+  0% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+
+  50% {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+  
+  50.1% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  
+  100% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+}
+
+@keyframes border-left {
+  0% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+
+  50% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  
+  50.1% {
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+  
+  100% {
+    transform: scaleY(1);
+    transform-origin: bottom;
+  }
 }

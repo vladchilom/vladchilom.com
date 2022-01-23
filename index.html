@@ -2,33 +2,62 @@
 
 <html>
 <head>
-  <meta http-equiv='Content-Security-Policy' content="default-src 'self' http://fonts.googleapis.com/css http://fonts.gstatic.com/s/">
-  <meta charset='UTF-8' name='viewport' content='width=device-width, initial-scale=0.7'>
   <title>Vlad Chilom</title>
+  <meta http-equiv='Content-Security-Policy' content="default-src 'self' http://fonts.googleapis.com/css http://fonts.gstatic.com/s/">
+  <meta charset='UTF-8' name='viewport' content='width=device-width' initial-scale=1.0>
   <link rel='stylesheet' href='/public/css/main.css'>
   <link rel='icon' href='public/img/color.ico' type='image/x-icon' />
 </head>
 
 <body>
-  <div id='page' class='animation'>
-    <div id='title'>
-      <span>Vlad Chilom<br/>
-      <span class='position'>Boston College Class of 2018</span><br/>
-      <span class='position'>Incoming Software Engineer at Wayfair</span>
-    </span>
-    </div>
-    <div id='content'>
-      <div id='photo'>
-        <img src='/public/img/photo.jpg' id='headshot' alt='Vlad Chilom'> 
-      </div>
-      <div id='links'>
-        <a href='/resume'>Resume</a> <br>
-        <a href='https://github.com/vladchilom'>GitHub</a> <br>
-        <a href='https://www.linkedin.com/in/vladchilom'>LinkedIn</a> <br>
-        <a href='mailto:chilom@bc.edu'>Contact</a> 
+  <div id='body-container'>
+    <div id='animation-container'>
+      <div id='animation-top' class='animation-line'></div>
+      <div id='animation-right' class='animation-line'></div>
+      <div id='animation-bottom' class='animation-line'></div>
+      <div id='animation-left' class='animation-line'></div>
+      <div id='page-container'>
+        <div id='heading-container'>
+          <div id='name'>
+            Vlad Chilom
+          </div>
+          <div id='title'>
+            Senior Software Engineer at
+            <a target='_blank' rel='noopener noreferrer' href='https://www.wayfair.com/'>
+              Wayfair
+            </a>
+          </div>
+        </div>
+
+        <div id='content-container'>
+          <div id='photo-container'>
+            <img src='/public/img/photo.jpg' id='photo' alt='Vlad Chilom'> 
+          </div>
+          <div id='links-container'>
+            <a class='link' target='_blank' rel='noopener noreferrer' href='/resume'>
+              <div class='link-container'>
+                Resume
+              </div>
+            </a>
+            <a class='link' target='_blank' rel='noopener noreferrer' href='https://github.com/vladchilom'>
+              <div class='link-container'>
+                GitHub
+              </div>
+            </a>
+            <a class='link' target='_blank' rel='noopener noreferrer' href='https://www.linkedin.com/in/vladchilom'>
+              <div class='link-container'>
+                LinkedIn
+              </div>
+            </a>
+            <a class='link' target='_blank' rel='noopener noreferrer' href='mailto:vchilom6@gmail.com'>
+              <div class='link-container'>
+                Contact
+              </div>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <script type="text/javascript" src='public/js/animate.js'></script>
 </body>
 </html>
