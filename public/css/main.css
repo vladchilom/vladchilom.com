@@ -8,10 +8,13 @@ html, body {
   font-family: 'Roboto', sans-serif;
   font-weight: bold;
   text-align: center;
+  color: rgba(205, 205, 205);
+  background-color: rgba(13, 17, 23, 1);
 }
 
 a {
   text-decoration: none;
+  color: rgba(205, 205, 205);
 }
 
 #body-container {
@@ -76,6 +79,7 @@ a {
 
 #photo {
   width: 100%;
+  border: 2px solid rgba(205, 205, 205);
   border-radius: 50%;
   align-self: center;
 }
@@ -94,7 +98,6 @@ a {
 
 .link {
   font-size: 1.2rem;
-  color: black;
 }
 
 #links-container a {
@@ -139,14 +142,14 @@ a {
     transition: .1s transform linear, .1s height linear .1s;
     transform: translateX(0);
     height: 100%;
-    border-color: black;
+    border-color: rgba(205, 205, 205);
   }
 
   #links-container .link-container:hover:after {
     transition: .1s transform linear .2s, .1s height linear .3s;
     transform: translateX(0);
     height: 100%;
-    border-color: black;
+    border-color: rgba(205, 205, 205);
   }
 }
 
@@ -160,7 +163,7 @@ a {
   width: 100%;
   height: 2px;
   content: '';
-  background: black;
+  background: rgba(205, 205, 205);
   animation: border-top 20s linear 0s infinite;
 }
 
@@ -170,7 +173,7 @@ a {
   width: 2px;
   height: 100%;
   content: '';
-  background: black;
+  background: rgba(205, 205, 205);
   animation: border-right 20s linear 0s infinite;
 }
 
@@ -180,7 +183,7 @@ a {
   width: 100%;
   height: 2px;
   content: '';
-  background: black;
+  background: rgba(205, 205, 205);
   animation: border-bottom 20s linear 0s infinite;
 }
 
@@ -190,7 +193,7 @@ a {
   width: 2px;
   height: 100%;
   content: '';
-  background: black;
+  background: rgba(205, 205, 205);
   animation: border-left 20s linear 0s infinite;
 }
 
